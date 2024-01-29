@@ -89,7 +89,7 @@ function Cadastro() {
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuario</label>
             <input
-              type="text"
+              type="email"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
