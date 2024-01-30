@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.21.2",
+    "react-toastify": "^10.0.4",
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {

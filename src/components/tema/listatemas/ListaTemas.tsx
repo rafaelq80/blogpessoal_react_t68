@@ -22,7 +22,7 @@ function ListaTemas() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token Expirou!')
+                toastalerta('O token Expirou!')
                 handleLogout()
             }
         }
@@ -30,7 +30,7 @@ function ListaTemas() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            toastalerta('Você precisa estar logado!')
             navigate('/')
         }
     }, [token])
