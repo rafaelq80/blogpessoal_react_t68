@@ -141,28 +141,37 @@ function FormPostagem() {
             </h1>
 
             <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovaPostagem}>
+                
                 <div className="flex flex-col gap-2">
                     <label htmlFor="titulo">Título da Postagem</label>
                     <input
                         type="text"
                         placeholder="Titulo"
                         name="titulo"
-                        required
                         className="border-2 border-slate-700 rounded p-2"
                         value={postagem.titulo}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        required
+                        minLength={5}
+                        maxLength={100}
+                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('O Título deve ter no mínimo 5 e no máximo 100 caracteres!')}
+                        onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="titulo">Texto da Postagem</label>
+                    <label htmlFor="texto">Texto da Postagem</label>
                     <input
                         type="text"
                         placeholder="Texto"
                         name="texto"
-                        required
                         className="border-2 border-slate-700 rounded p-2"
                         value={postagem.texto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        required
+                        minLength={10}
+                        maxLength={1000}
+                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('O Título deve ter no mínimo 10 e no máximo 1000 caracteres!')}
+                        onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
                 <div className="flex flex-col gap-2">
