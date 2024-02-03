@@ -111,9 +111,6 @@ function FormTema() {
                         className="border-2 border-slate-700 rounded p-2"
                         value={tema.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        required
-                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Digite um tema válido!')}
-                        onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
                 <button
